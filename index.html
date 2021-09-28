@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://kit.fontawesome.com/b862bb0d81.js" crossorigin="anonymous"></script>
+        <script defer src="./script.js"></script>
+        <title>Gradient Generator</title>
+
+        <script type="text/javascript">
+            // Wait for document to load
+            document.addEventListener("DOMContentLoaded", function(event) {
+            document.documentElement.setAttribute("data-theme", "light");
+
+            // Get our button switcher
+            var themeSwitcher = document.getElementById("theme-switcher");
+                        
+            // When our button gets clicked
+            themeSwitcher.onclick = function() {
+                // Get the current selected theme, on the first run
+                // it should be `light`
+                var currentTheme = document.documentElement.getAttribute("data-theme");
+                        
+                // Switch between `dark` and `light`
+                var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+                        
+                // Set our currenet theme to the new one
+                document.documentElement.setAttribute("data-theme", switchToTheme);
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Create your own Gradient</h1>
+        <input type="checkbox" id="switch" />
+        <label class="switch-label" for="switch"  id="theme-switcher">Toggle</label>
+
+        <div class="container1">
+            <div class="gradient" id="gradient"></div>
+            <div class="code">
+                <input type="color" value="#FFB319" name="color1" class="color1" />
+                <input type="color" value="#F43B86" name="color2" class="color2" />
+                <h3>Color Code of Generated Gradient:</h3>
+                <h4></h4>
+            </div>
+        </div>
+
+    </body>
+
+</html>

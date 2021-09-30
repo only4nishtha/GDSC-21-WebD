@@ -4,7 +4,6 @@ var color2 = document.querySelector(".color2");
 var ratio = document.querySelector(".ratio");
 var type = document.querySelector("#type");
 var gradient = document.getElementById("gradient");
-console.log(ratio.value);
 
 function setGradient() {
     if(type.value == "linear-gradient"){
@@ -29,11 +28,21 @@ function setGradient() {
        }
 }
 
-console.log(type.value, "3");
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 ratio.addEventListener("input", setGradient);
 type.addEventListener("input", setGradient);
+
+function copy() {
+    let text = css.innerText;
+    let input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    alert('Copied Colour Code: \n' + text);
+}
 
 select('#switch').addEventListener('click', () => {
     // select('body').toggleClass('dark')

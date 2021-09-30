@@ -26,7 +26,7 @@
 
 #gradient{
     position: relative;
-    background: linear-gradient(45deg, #FFB319 , #F43B86);
+    background: radial-gradient(#FFB319 , #F43B86);
     width: 250px;
     height: 320px;
     border-radius: 25px;
@@ -44,7 +44,6 @@ h1{
 }
 
 [data-theme="dark"] h1{
-    // font-family: 'Spartan', sans-serif; 
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -88,8 +87,7 @@ h3 {
     width: 100%;
     margin: 2rem auto;
 }
-[data-theme="dark"] h3{
-    // font-family: 'Comfortaa', cursive; 
+[data-theme="dark"] h3{ 
     color: #d1cece;
     text-align: center;
     letter-spacing: .3em;
@@ -104,6 +102,34 @@ h4{
     margin: auto 6rem;
     width: 50%;
 }
+
+.ratio {
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+}
+
+[data-theme="dark"] .ratio {
+    background-color: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#type {
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 5px;
+    width: 150px;
+}
+
+[data-theme="dark"] #type {
+    background-color: #fff;
+    color: #000;
+}
+
 .container1{
     display: flex;
     justify-content: center;
@@ -120,6 +146,7 @@ h4{
     height: 0;
     width: 0;
     visibility: hidden;
+    margin-left: 45%;
 }
 
 label.switch-label {
@@ -127,7 +154,7 @@ label.switch-label {
     text-indent: -9999px;
     width: 70px;
     height: 35px;
-    background: rgb(26, 4, 155);
+    background: #000;
     display: block;
     border-radius: 10px;
     position: relative;
@@ -147,7 +174,7 @@ label.switch-label:after {
 }
 
 input#switch:checked+label.switch-label {
-    background: rgb(26, 4, 155);
+    background: #fff;
 }
 
 input#switch:checked+label.switch-label:after {
